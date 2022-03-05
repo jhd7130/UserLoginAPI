@@ -1,8 +1,8 @@
 package com.example.sessionClustering.dto;
 
-import com.example.sessionClustering.entity.Login;
+import com.example.sessionClustering.entity.LoginEntity;
 
-public class LoginForm {
+public class LoginDTO {
 
     private String email;
     private String password;
@@ -31,5 +31,5 @@ public class LoginForm {
                 '}';
     }
 
-    public Login toEntity(){ return new Login(null,email,password);}
+    public LoginEntity toEntity(){ return new LoginEntity(null,email,password);}
 }

@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Login {
+public class LoginEntity {
 
     @Id
     @GeneratedValue
@@ -19,7 +19,7 @@ public class Login {
     @Column
     private String password;
 
-    public Login(Long id,String email,String password){
+    public LoginEntity(Long id, String email, String password){
         this.id = id;
         this.email = email;
         this.password = password;

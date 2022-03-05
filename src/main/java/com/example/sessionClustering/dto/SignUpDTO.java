@@ -1,6 +1,6 @@
 package com.example.sessionClustering.dto;
 
-public class SignUpForm {
+public class SignUpDTO {
 
     private String userNm;
     private String phone;
@@ -59,7 +59,7 @@ public class SignUpForm {
 
     @Override
     public String toString() {
-        return "SignInForm{" +
+        return "SignUpDTO{" +
                 "userNm='" + userNm + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +

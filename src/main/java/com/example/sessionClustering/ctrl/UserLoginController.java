@@ -1,7 +1,7 @@
 package com.example.sessionClustering.ctrl;
 
-import com.example.sessionClustering.dto.LoginForm;
-import com.example.sessionClustering.entity.Login;
+import com.example.sessionClustering.dto.LoginDTO;
+import com.example.sessionClustering.entity.LoginEntity;
 import com.example.sessionClustering.service.LoginService;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,9 +24,9 @@ public class UserLoginController {
     }
 
     @PostMapping("login/tryToLogin")
-    public String tryLogin(LoginForm form){
+    public String tryLogin(LoginDTO form){
 
-        Login login = form.toEntity();
+        LoginEntity login = form.toEntity();
 
 
 
