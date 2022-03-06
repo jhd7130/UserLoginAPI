@@ -1,8 +1,8 @@
 package com.example.sessionClustering.service;
 
-import com.example.sessionClustering.entity.MemberEntity;
+import com.example.sessionClustering.entity.Member;
 
 public interface SignUpService {
 
-    MemberEntity join(MemberEntity signUpEntity);
+    Member join(Member signUpEntity);
 }

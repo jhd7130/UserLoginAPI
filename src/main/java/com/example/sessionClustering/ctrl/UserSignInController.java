@@ -1,7 +1,7 @@
 package com.example.sessionClustering.ctrl;
 
 
-import com.example.sessionClustering.entity.MemberEntity;
+import com.example.sessionClustering.entity.Member;
 import com.example.sessionClustering.service.SignUpService;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +21,7 @@ public class UserSignInController {
     }
 
     @PostMapping(value = "/user/member")
-    public MemberEntity saveMember(@RequestBody MemberEntity signUpEntity) {
+    public Member saveMember(@RequestBody Member signUpEntity) {
         return signUpService.join(signUpEntity);
       //  return signUpService.join(signUpEntity);
     }

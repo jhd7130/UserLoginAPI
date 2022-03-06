@@ -2,7 +2,7 @@ package com.example.sessionClustering.service.impl;
 
 import com.example.sessionClustering.dto.LoginDTO;
 import com.example.sessionClustering.dto.MemberDTO;
-import com.example.sessionClustering.entity.MemberEntity;
+import com.example.sessionClustering.entity.Member;
 import com.example.sessionClustering.repository.MemberRepository;
 import com.example.sessionClustering.service.LoginService;
 import org.springframework.stereotype.Service;
@@ -26,7 +26,7 @@ public class LoginServiceImpl implements LoginService {
             MemberDTO memberDTO = new MemberDTO();
             return memberDTO;
         }
-        MemberEntity memberEntity = memberRepository.findByEmail(loginDTO.getEmail());
+        Member memberEntity = memberRepository.findByEmail(loginDTO.getEmail());
 
         if(memberEntity.getPassword().equals(loginDTO.getPassword())){
             MemberDTO memberDTO = new MemberDTO(memberEntity);

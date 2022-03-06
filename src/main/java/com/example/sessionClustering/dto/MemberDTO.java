@@ -1,6 +1,6 @@
 package com.example.sessionClustering.dto;
 
-import com.example.sessionClustering.entity.MemberEntity;
+import com.example.sessionClustering.entity.Member;
 import lombok.Data;
 
 @Data
@@ -14,7 +14,7 @@ public class MemberDTO {
     private String userId;
 
     public MemberDTO(){}
-    public MemberDTO(MemberEntity signUpEntity){
+    public MemberDTO(Member signUpEntity){
         this.email = signUpEntity.getEmail();
         this.phone = signUpEntity.getPhone();
         this.address = signUpEntity.getAddress();

@@ -3,21 +3,23 @@ package com.example.sessionClustering.entity;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @Entity
-public class MemberEntity {
+@Table(name = "Member")
+public class Member implements Serializable {
+
+    private static final long serialVersionUID=2004020003L;
 
     @Id
     @GeneratedValue(generator = "USER_GENERATOR")
     @GenericGenerator(name = "USER_GENERATOR", strategy = "uuid")
+
     private String userId;
 
-    @Column
+    @Column(name = "userNm")
     private String userNm;
 
     @Column
